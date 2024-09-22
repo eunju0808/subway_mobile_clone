@@ -58,7 +58,7 @@ $(function(){
     $(".navi_bar .right_menu li a").click(function(){
         $(".left_menu li a").removeClass("on")
         $(this).toggleClass('on').parent().siblings().children().removeClass('on')
-    })
+    });
 
     let sw=true
     // 더보기 버튼 클릭 시
@@ -77,14 +77,17 @@ $(function(){
             $(".home a").addClass("on")
         }
         
-    })
+    });
 
     // 서브 메뉴
     $(".m_btn").click(function(){
         $("#m_menu_wrap").animate({"left":0}),300;
         $('body,html').css({'overflow':'hidden'})
         $(".cover").fadeIn(300);
-    })
+        $(".more a").addClass("on")
+        sw=false
+        $(".home a").removeClass("on")
+    });
     $(".close_btn").click(function(){
         $("#m_menu_wrap").animate({"left":"-100%"}),300;
         $('body,html').css({'overflow':'auto'})
@@ -92,11 +95,27 @@ $(function(){
         $(".more a").removeClass("on")
         sw=true
         $(".home a").addClass("on")
-    })
+    });
     $('.m_gnb>li>a').click(function(){
         $(this).parent().toggleClass('on').siblings().removeClass('on')
         $(this).addClass("on")
         $(this).next().slideToggle().parent().siblings()
         .find('.depth2').slideUp();
-    })
+    });
+
+    // 스크롤 버튼
+    $(".scroll_btn").on("click",function(){
+        $('body,html').animate({'scrollTop':0},500)
+    });
+
+    // 스크롤 위치에 따라 버튼 튀어나오기
+    $(window).scroll(function(){
+        var h = $(document).scrollTop(); //현재 스크롤 위치
+        console.log(h)
+            if(h<=99){
+                $(".scroll_btn").stop().animate({"bottom":"-100%"}),100;
+            }else{
+                $(".scroll_btn").stop().animate({"bottom":"73px"}),100;
+            }
+    });
 })

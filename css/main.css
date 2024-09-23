@@ -35,7 +35,7 @@ img{display: block;}
     bottom: 0;
     z-index: 120;
     width: 100%;
-    height: 65px;
+    height: 63px;
     background: url(../images/navi_bg.png) no-repeat center;
     background-size: contain;
     display: flex;
@@ -47,13 +47,15 @@ img{display: block;}
     display: flex;
 }
 .navi_bar .left_menu{
-    justify-content: left;
+    padding-right: 60px;
+    justify-content: space-around;
 }
 .navi_bar .right_menu{
-    justify-content: right;
+    padding-left: 60px;
+    justify-content: space-around;
 }
 .navi_bar ul li{
-    width: 82px;
+    width: 50%;
     height: 100%;
     background: #fff;
 }
@@ -492,7 +494,7 @@ main .swiper .swiper-pagination{
 }
 .order_box ul li{
     width: 50%;
-    height: 170px;
+    min-height: 134px;
     background: #fff;
     border-radius: 18px;
     padding: 15px;
@@ -516,7 +518,7 @@ main .swiper .swiper-pagination{
     font-weight: 900;
 }
 .order_box ul li>a>img{
-    width: 52px;
+    width: 44px;
     position: absolute;
     right: 0;
     bottom: 0;
@@ -524,15 +526,15 @@ main .swiper .swiper-pagination{
 .store{
     margin-top: 35px;
     width: 100%;
-    height: 247px;
 }
 .store h3{
-    margin-left: 20px;
+    margin: 0 0 15px 20px;
     font-size: 18px;
     color: #232323;
 }
 .store .info{
-    margin: 70px auto 55px;
+    min-height: 200px;
+    padding: 54px 0;
 }
 .store .info img{
     width: 40px;
@@ -551,10 +553,25 @@ main .swiper .swiper-pagination{
     width: 100%;
     height: 230px;
 }
-.menu h3{
-    margin: 0 0 15px 20px;
+.menu .title{
+    width: 100%;
+    padding: 0 20px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+.menu .title h3{
     font-size: 18px;
     color: #232323;
+}
+.menu .title a{
+    display: block;
+    width: 10px;
+    height: 16px;
+}
+.menu .title a img{
+    width: 100%;
+    height: 100%;
 }
 .menu .swiper2{
     width: 100%;

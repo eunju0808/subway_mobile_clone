@@ -47,11 +47,11 @@ img{display: block;}
     display: flex;
 }
 .navi_bar .left_menu{
-    padding-right: 60px;
+    padding-right: 57px;
     justify-content: space-around;
 }
 .navi_bar .right_menu{
-    padding-left: 60px;
+    padding-left: 57px;
     justify-content: space-around;
 }
 .navi_bar ul li{
